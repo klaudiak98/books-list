@@ -1,8 +1,8 @@
 import Book from './Book'
 
-const BooksList = ({books}) => {
+const BooksList = ({books, onDelete}) => {
   const renderedBooks = books.map((book) => (
-    <Book key={book.id} book={book} />
+    <Book key={book.id} book={book} onDelete={onDelete}/>
   ))
   return (
     <div className='book-list'>
