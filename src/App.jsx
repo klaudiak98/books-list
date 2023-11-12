@@ -14,9 +14,14 @@ const App = () => {
         setBooks(filteredBooks)
     }
 
+    const editBookById = (id, newTitle) => {
+        const updatedBooksList = books.map((book) => (book.id === id ? {...book, title: newTitle} : book))
+        setBooks(updatedBooksList)
+    }
+
     return (
         <div>
-            <BooksList books={books} onDelete={deleteBookById}/>
+            <BooksList books={books} onDelete={deleteBookById} onEdit={editBookById}/>
             <NewBookForm onSubmit={createBook} />
         </div>
     )
