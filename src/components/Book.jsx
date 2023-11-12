@@ -19,6 +19,7 @@ const Book = ({book, onDelete, onEdit}) => {
 
   return ( 
     <div className="book-show">
+      <img alt='books' src={`https://picsum.photos/seed/${book.id}/300/200`}/> 
       {showEdit ? <BookEditForm book={book} onSubmit={handleSubmit} /> : <h3>{book.title}</h3> } 
       <div className="actions">
         <button onClick={handleEdit} className="edit">Edit</button>

@@ -20,7 +20,8 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className="app">
+            <h1>Reading List</h1>
             <BooksList books={books} onDelete={deleteBookById} onEdit={editBookById}/>
             <NewBookForm onSubmit={createBook} />
         </div>
