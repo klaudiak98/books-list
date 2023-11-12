@@ -1,5 +1,6 @@
 import { useState } from "react"
 import NewBookForm from './components/NewBookForm'
+import BooksList from './components/BooksList'
 
 const App = () => {
     const [books, setBooks] = useState([])
@@ -10,6 +11,7 @@ const App = () => {
 
     return (
         <div>
+            <BooksList books={books} />
             <NewBookForm onSubmit={createBook} />
         </div>
     )

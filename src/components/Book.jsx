@@ -1,6 +1,6 @@
-const Book = () => {
+const Book = ({book}) => {
   return (
-    <div>Book</div>
+    <div className="book-show">{book.title}</div>
   )
 }
 

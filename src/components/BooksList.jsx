@@ -1,6 +1,13 @@
-const BooksList = () => {
+import Book from './Book'
+
+const BooksList = ({books}) => {
+  const renderedBooks = books.map((book) => (
+    <Book key={book.id} book={book} />
+  ))
   return (
-    <div>BooksList</div>
+    <div className='book-list'>
+      {renderedBooks}
+    </div>
   )
 }
 
