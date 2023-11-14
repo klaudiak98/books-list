@@ -1,9 +1,10 @@
-import { useState, useContext} from "react"
+import { useState } from "react"
 import BooksContext from "../context/BooksContext"
+import useBooksContext from '../hooks/useBooksContext'
 
 const BookEditForm = ({ book, onSubmit }) => {
   const [title, setTitle] = useState(book.title)
-  const { editBookById } = useContext(BooksContext)
+  const { editBookById } = useBooksContext(BooksContext)
   
   const handleChange = (event) => {
     setTitle(event.target.value)
